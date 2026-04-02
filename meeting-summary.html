@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สรุปการประชุม · Robot Sales Excom 06/03/2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Sarabun',sans-serif;background:#0F172A;color:#E2E8F0;min-height:100vh}
+.hdr{background:linear-gradient(135deg,#1E293B,#0F172A);border-bottom:1px solid #1E293B;padding:20px 24px}
+.hdr-in{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.logo{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#64748B}
+h1{font-size:20px;font-weight:700;color:#F1F5F9;margin-top:4px}
+.hdr-right{display:flex;gap:8px;flex-wrap:wrap}
+.btn{padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:'Sarabun',sans-serif;transition:all .15s}
+.btn-outline{background:transparent;border:1px solid #334155;color:#94A3B8}
+.btn-outline:hover{border-color:#38BDF8;color:#38BDF8}
+.btn-green{background:#22C55E;color:#fff}
+.btn-green:hover{background:#16A34A}
+.main{max-width:900px;margin:0 auto;padding:20px 24px 80px}
+.meta-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+@media(max-width:600px){.meta-grid{grid-template-columns:1fr}}
+.meta-box{background:#1E293B;border:1px solid #334155;border-radius:10px;padding:12px 14px}
+.meta-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#64748B;margin-bottom:6px}
+.meta-val{font-size:15px;font-weight:600;color:#22C55E}
+.ai-input{width:100%;background:#0F172A;border:1px solid #1E293B;border-radius:6px;padding:7px 10px;font-size:13px;color:#E2E8F0;font-family:'Sarabun',sans-serif;outline:none;line-height:1.5}
+.ai-input:focus{border-color:#38BDF8}
+.ai-input::placeholder{color:#334155}
+input[type=date].ai-input{color-scheme:dark}
+.att-box{background:#1E293B;border:1px solid #334155;border-radius:10px;padding:14px 16px;margin-bottom:14px}
+.att-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#64748B;margin-bottom:10px}
+.att-tags{display:flex;flex-wrap:wrap;gap:6px}
+.att-tag{display:inline-flex;align-items:center;gap:6px;background:#334155;border-radius:999px;padding:4px 12px;font-size:13px;color:#E2E8F0}
+.section{background:#1E293B;border:1px solid #334155;border-radius:10px;margin-bottom:12px;overflow:hidden}
+.section-hdr{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;cursor:pointer;user-select:none}
+.section-hdr:hover{background:#ffffff05}
+.section-title{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:#E2E8F0}
+.section-icon{font-size:18px}
+.section-body{padding:4px 16px 16px}
+.section-chev{color:#475569;font-size:12px;transition:transform .2s}
+.section-chev.open{transform:rotate(0deg)}
+.section-chev.closed{transform:rotate(-90deg)}
+.stext{width:100%;background:#0F172A;border:1px solid #1E293B;border-radius:8px;padding:10px 12px;font-size:14px;color:#E2E8F0;font-family:'Sarabun',sans-serif;resize:vertical;line-height:1.8;outline:none}
+.stext:focus{border-color:#38BDF8}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+@media(max-width:560px){.kpi-grid{grid-template-columns:1fr 1fr}}
+.kpi-box{background:#0F172A;border:1px solid #1E293B;border-radius:8px;padding:10px 12px;text-align:center}
+.kpi-val{font-size:18px;font-weight:700}
+.kpi-lbl{font-size:11px;color:#64748B;margin-top:3px}
+.warn-box{background:#EF444415;border:1px solid #EF444430;border-radius:8px;padding:10px 14px;font-size:13px;color:#FCA5A5}
+.ai-table{width:100%;border-collapse:collapse;margin-bottom:8px}
+.ai-table th{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#64748B;text-align:left;padding:0 8px 8px;border-bottom:1px solid #334155}
+.ai-table td{padding:5px 8px;vertical-align:top;border-bottom:1px solid #0F172A}
+.ai-table tr:last-child td{border-bottom:none}
+.ai-add{width:100%;padding:8px;border-radius:8px;border:1px dashed #334155;background:transparent;color:#64748B;font-size:13px;cursor:pointer;font-family:'Sarabun',sans-serif;margin-top:4px;transition:all .15s}
+.ai-add:hover{border-color:#38BDF8;color:#38BDF8}
+.ai-del{background:none;border:none;color:#475569;cursor:pointer;font-size:16px;padding:4px;border-radius:6px}
+.ai-del:hover{color:#EF4444}
+.dec-list{display:flex;flex-direction:column;gap:8px}
+.dec-row{display:flex;gap:10px;align-items:flex-start}
+.dec-num{width:24px;height:24px;border-radius:50%;background:#22C55E22;color:#22C55E;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:8px;border:1px solid #22C55E44}
+.dec-del{background:none;border:none;color:#475569;cursor:pointer;font-size:16px;padding:4px;border-radius:6px;margin-top:6px;flex-shrink:0}
+.dec-del:hover{color:#EF4444}
+.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+@media(max-width:480px){.next-grid{grid-template-columns:1fr}}
+.field-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#64748B;margin-bottom:6px}
+.status-bar{position:fixed;bottom:0;left:0;right:0;background:#0F172A;border-top:1px solid #1E293B;padding:10px 24px;z-index:10}
+.status-bar-in{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.saved-lbl{font-size:12px;color:#22C55E;opacity:0;transition:opacity .3s}
+.saved-lbl.show{opacity:1}
+@media print{
+  body{background:#fff;color:#000}
+  .hdr{background:#fff;border-bottom:2px solid #000;padding:16px 24px}
+  .logo,h1{color:#000}.logo{color:#555}
+  .hdr-right,.status-bar,.ai-del,.dec-del,.ai-add{display:none!important}
+  .meta-box,.att-box,.section,.kpi-box{background:#fff;border:1px solid #ccc}
+  .section-chev{display:none}
+  .section-body{display:block!important}
+  .stext,.ai-input{background:#fff;color:#000;border:1px solid #ccc}
+  .att-tag{background:#eee;color:#000}
+  .kpi-val{color:#000!important}
+  .warn-box{background:#fee2e2;color:#dc2626}
+  .dec-num{background:#dcfce7;color:#16a34a}
+  .main{padding-bottom:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-in">
+    <div>
+      <div class="logo">Robot System Co., Ltd. · Sales Excom</div>
+      <h1>📋 สรุปการประชุม</h1>
+    </div>
+    <div class="hdr-right">
+      <button class="btn btn-outline" onclick="addNewMeeting()">+ ประชุมใหม่</button>
+      <button class="btn btn-outline" onclick="window.print()">🖨 Print / PDF</button>
+      <button class="btn btn-green" onclick="saveLocal()">💾 บันทึก</button>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="meta-grid">
+    <div class="meta-box">
+      <div class="meta-label">📅 วันที่ประชุม</div>
+      <div class="meta-val" id="meetingDateDisplay">6 มีนาคม 2569</div>
+      <input type="date" class="ai-input" id="meetingDate" value="2026-03-06" style="margin-top:6px;color-scheme:dark" oninput="updateDateDisplay()">
+    </div>
+    <div class="meta-box">
+      <div class="meta-label">🏷 ชื่อการประชุม</div>
+      <input class="ai-input" id="meetingName" value="Robot Sales Excom" style="margin-top:6px;font-weight:600">
+    </div>
+    <div class="meta-box">
+      <div class="meta-label">📍 สถานที่ / ช่องทาง</div>
+      <input class="ai-input" id="meetingVenue" value="ห้องประชุม Robot System" style="margin-top:6px">
+    </div>
+  </div>
+
+  <!-- KPI -->
+  <div class="section">
+    <div class="section-hdr" onclick="toggleSec('kpi')">
+      <div class="section-title"><span class="section-icon">📊</span>ตัวเลขสำคัญ ณ วันประชุม</div>
+      <span class="section-chev open" id="chev-kpi">▼</span>
+    </div>
+    <div class="section-body" id="body-kpi">
+      <div class="kpi-grid">
+        <div class="kpi-box"><div class="kpi-val" style="color:#38BDF8">51.6M</div><div class="kpi-lbl">Quotation สะสม</div></div>
+        <div class="kpi-box"><div class="kpi-val" style="color:#22C55E">32M</div><div class="kpi-lbl">Backlog (มั่นใจ)</div></div>
+        <div class="kpi-box"><div class="kpi-val" style="color:#F59E0B">36.7M</div><div class="kpi-lbl">Focus Lead</div></div>
+        <div class="kpi-box"><div class="kpi-val" style="color:#8B5CF6">19.7M</div><div class="kpi-lbl">Pipeline 50–79%</div></div>
+        <div class="kpi-box"><div class="kpi-val" style="color:#E2E8F0">100M</div><div class="kpi-lbl">Target (Sales)</div></div>
+        <div class="kpi-box"><div class="kpi-val" style="color:#EF4444">65M</div><div class="kpi-lbl">Target (บัญชี) ⚠️</div></div>
+        <div class="kpi-box"><div class="kpi-val" style="color:#E2E8F0">35%</div><div class="kpi-lbl">GP เป้าหมาย</div></div>
+        <div class="kpi-box"><div class="kpi-val" style="color:#64748B">18–25%</div><div class="kpi-lbl">GP Historical</div></div>
+      </div>
+      <div class="warn-box">⚠️ <strong>ช่องว่างสำคัญ:</strong> Target Sales (100M) vs บัญชี (65M) ยังไม่ตรงกัน — ต้อง Align และทำ P&L ใหม่ก่อนประชุมครั้งถัดไป</div>
+    </div>
+  </div>
+
+  <!-- ATTENDEES -->
+  <div class="att-box">
+    <div class="att-label">👥 ผู้เข้าร่วมประชุม</div>
+    <div class="att-tags" id="attTags">
+      <div class="att-tag">RT (ประธาน)</div>
+      <div class="att-tag">ซิ (Sales)</div>
+      <div class="att-tag">บาร์ท (Sales)</div>
+      <div class="att-tag">เบิ้ม (Sales)</div>
+      <div class="att-tag">ตี้ (Sales)</div>
+      <div class="att-tag">แตง (บัญชี / เลขา)</div>
+      <div class="att-tag">ตุ๋น (Engineering)</div>
+    </div>
+    <div style="display:flex;gap:6px;margin-top:10px">
+      <input type="text" class="ai-input" id="attInput" placeholder="เพิ่มชื่อผู้เข้าร่วม..." onkeydown="if(event.key==='Enter')addAtt()" style="flex:1">
+      <button class="btn btn-outline" style="padding:7px 12px;font-size:13px;white-space:nowrap" onclick="addAtt()">+ เพิ่ม</button>
+    </div>
+  </div>
+
+  <!-- AGENDA -->
+  <div class="section">
+    <div class="section-hdr" onclick="toggleSec('agenda')">
+      <div class="section-title"><span class="section-icon">📌</span>วาระการประชุม</div>
+      <span class="section-chev open" id="chev-agenda">▼</span>
+    </div>
+    <div class="section-body" id="body-agenda">
+      <textarea class="stext" id="agenda" rows="6">1. ติดตาม Action Items จากการประชุม 26 ก.พ. 2569
+2. รายงานยอดขายและสถานะ Pipeline ปัจจุบัน
+3. วิเคราะห์ Gap: Target Sales (100M) vs บัญชี (65M)
+4. ทบทวน GP และปัญหา Overhead Allocation
+5. อัปเดตสถานะ Partnership — Dazzle (Toyota) / Yamazen
+6. ความคืบหน้า AI BOM (Engineering)
+7. กำหนด Action Items และ Deadline ครั้งถัดไป</textarea>
+    </div>
+  </div>
+
+  <!-- KEY POINTS -->
+  <div class="section">
+    <div class="section-hdr" onclick="toggleSec('keypoints')">
+      <div class="section-title"><span class="section-icon">💡</span>ประเด็นสำคัญที่หารือ</div>
+      <span class="section-chev open" id="chev-keypoints">▼</span>
+    </div>
+    <div class="section-body" id="body-keypoints">
+      <textarea class="stext" id="keypoints" rows="14">1. ช่องว่าง PO vs เป้าหมาย
+   - Quotation สะสม 51.6M แต่ PO จริงเข้าเพียง 1.2–1.7M/เดือน (เป้า 9M)
+   - งานถูก Delay แต่ยังไม่มี Forecast เป็นระบบ
+   - ต้องเปลี่ยนจาก "นับใบเสนอ" → "Track PO/Invoice จริง"
+
+2. Target ไม่ตรงกัน
+   - Sales ยืนยัน 100–120M / บัญชีใส่ Budget เพียง 65M
+   - บัญชีใช้ Cost Rate 82% → GP เหลือ 18% แต่ระบบแสดง 41% (ไม่สอดคล้องกัน)
+   - ต้อง Align ก่อน และทำ P&L ใหม่ให้ตรงกัน
+
+3. GP บิดเบือน — สาเหตุและแนวทางแก้
+   - Overhead ยังไม่ได้ Allocate ครบทุก Job
+   - DL ไม่ได้ดึงจาก HR — ใช้การประมาณแทน
+   - Job ที่มี Additional PO แยกใบ → Cost ปนกันทำ GP ผิด
+   - แนวทาง: สร้าง Dummy Project + Merge Job + ดึง DL จาก HR จริง
+
+4. Revenue Path สู่ 100M
+   - Backlog 32M + Focus Lead 36.7M = 68.7M (มั่นใจ)
+   - Pipeline 19.7M ต้องปิดให้ได้ก่อนสิ้นปี
+   - งาน Import จากจีน (GP 15–18%, ไม่มี DL) แยกออก ไม่นับใน 100M
+
+5. Partnerships
+   - Dazzle: รอ PO Toyota ~3–4 แสน (งาน Digital Twin) — ยังไม่ Confirm
+   - Yamazen: งานรอติดตั้ง เป้าปีนี้ 20M ระยะยาว 50M — ยังเป็น Forecast
+
+6. AI BOM (Engineering)
+   - กำลัง Implement AI ช่วย Key BOM แทน Excel
+   - คาดลดเวลา 30–35% และลด OT
+
+7. กระบวนการประชุม
+   - ที่ผ่านมาไม่เคย Follow-up Action Items จากครั้งก่อน → ต้องเปลี่ยน
+   - ต้องกำหนด Owner + Deadline ชัดเจนทุกครั้ง ไม่ให้ประเด็นค้าง</textarea>
+    </div>
+  </div>
+
+  <!-- DECISIONS -->
+  <div class="section">
+    <div class="section-hdr" onclick="toggleSec('decisions')">
+      <div class="section-title"><span class="section-icon">✅</span>มติ / ข้อตกลงร่วมกัน</div>
+      <span class="section-chev open" id="chev-decisions">▼</span>
+    </div>
+    <div class="section-body" id="body-decisions">
+      <div class="dec-list" id="decList"></div>
+      <button class="ai-add" onclick="addDec()">+ เพิ่มมติ</button>
+    </div>
+  </div>
+
+  <!-- ACTION ITEMS -->
+  <div class="section">
+    <div class="section-hdr" onclick="toggleSec('actions')">
+      <div class="section-title"><span class="section-icon">🎯</span>Action Items ทั้งหมด (17 รายการ)</div>
+      <span class="section-chev open" id="chev-actions">▼</span>
+    </div>
+    <div class="section-body" id="body-actions">
+      <table class="ai-table">
+        <thead>
+          <tr>
+            <th style="width:34%">รายการ</th>
+            <th style="width:12%">ทีม</th>
+            <th style="width:15%">ผู้รับผิดชอบ</th>
+            <th style="width:14%">Deadline</th>
+            <th style="width:13%">ระดับ</th>
+            <th style="width:4%"></th>
+          </tr>
+        </thead>
+        <tbody id="aiTbody"></tbody>
+      </table>
+      <button class="ai-add" onclick="addAI()">+ เพิ่ม Action Item</button>
+    </div>
+  </div>
+
+  <!-- NOTES -->
+  <div class="section">
+    <div class="section-hdr" onclick="toggleSec('notes')">
+      <div class="section-title"><span class="section-icon">📝</span>โน้ตเพิ่มเติม / ข้อสังเกต</div>
+      <span class="section-chev open" id="chev-notes">▼</span>
+    </div>
+    <div class="section-body" id="body-notes">
+      <textarea class="stext" id="notes" rows="4">- งาน Import จากจีน (Low GP, ไม่มี DL) ให้แยกออกจาก Main Revenue Target 100M
+- การประชุมครั้งถัดไปต้องเริ่มด้วย Follow-up Action Items ทุกครั้ง
+- แตง (เลขา) ส่ง Meeting Summary + Action Items ให้ทุกคนภายใน 24 ชม. หลังประชุม
+- GP ระบบแสดง 41% แต่ Historical จริงอยู่ที่ 18–25% → ตัวเลขยังไม่น่าเชื่อถือจนกว่าจะแก้ Overhead</textarea>
+    </div>
+  </div>
+
+  <!-- NEXT MEETING -->
+  <div class="section">
+    <div class="section-hdr" onclick="toggleSec('next')">
+      <div class="section-title"><span class="section-icon">📆</span>การประชุมครั้งถัดไป</div>
+      <span class="section-chev open" id="chev-next">▼</span>
+    </div>
+    <div class="section-body" id="body-next">
+      <div class="next-grid">
+        <div>
+          <div class="field-label">วันที่</div>
+          <input type="date" class="ai-input" id="nextDate" style="color-scheme:dark">
+        </div>
+        <div>
+          <div class="field-label">สถานที่ / ช่องทาง</div>
+          <input type="text" class="ai-input" id="nextVenue" value="ห้องประชุม Robot System">
+        </div>
+      </div>
+      <div style="margin-top:10px">
+        <div class="field-label">วาระที่ต้องพูดถึงครั้งหน้า</div>
+        <textarea class="stext" id="nextAgenda" rows="5">1. ✅ Follow-up Action Items จากการประชุม 06/03/2026 (ทุกข้อ — บังคับ)
+2. P&L ใหม่ Target 100M แตกรายเดือน (แตง นำเสนอ)
+3. Revenue Tracker — ยืนยันยอดรับจริง Column by Column (เบิ้ม + ตี้)
+4. อัปเดตสถานะ Dazzle (PO Toyota) และ Yamazen (เบิ้ม)
+5. ความคืบหน้า Cluster Database Non-Automotive (ซิ + บาร์ท)
+6. สถานะ Overhead Allocation + P&L ที่แก้ไขแล้ว (แตง)</textarea>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="status-bar">
+  <div class="status-bar-in">
+    <div style="font-size:12px;color:#475569" id="lastSaved">บันทึกอัตโนมัติทุก 30 วินาที</div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <span class="saved-lbl" id="savedLbl">✓ บันทึกแล้ว</span>
+      <button class="btn btn-outline" onclick="window.print()">🖨 Print / PDF</button>
+      <button class="btn btn-green" onclick="saveLocal()">💾 บันทึก</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const DEFAULT_DECISIONS=[
+  "Target Revenue ปีนี้ = 100M (Sales ยืนยัน) — บัญชีต้อง Align และทำ P&L ใหม่",
+  "งาน Import จากจีน (Low-GP, ไม่มี DL) แยกออกจาก Main Revenue Target 100M",
+  "ครั้งหน้าต้อง Track Revenue แบบ Column-by-Column จากสไลด์ Revenue Tracker",
+  "ทุกการประชุมต้องเริ่มด้วย Follow-up Action Items จากครั้งก่อนเสมอ",
+  "กำหนด Action Owner + Deadline ชัดเจนทุกประเด็น ไม่ให้ค้างโดยไม่มีผู้รับผิดชอบ",
+];
+const DEFAULT_ACTIONS=[
+  {task:"เร่งแปลง Quotation → PO → Invoice โดยเฉพาะ Pipeline 19.7M (Win Rate 50–79%)",team:"ทีมขาย",owner:"ซิ, บาร์ท, เบิ้ม",due:"",pri:"urgent"},
+  {task:"ทำ Cluster Database กลุ่ม Non-Automotive (บรรจุภัณฑ์ อาหารสัตว์ นม น้ำหวาน)",team:"ทีมขาย",owner:"ซิ, บาร์ท",due:"2026-03-20",pri:"urgent"},
+  {task:"ส่ง Focus Lead + Forecast PO รายเดือนใน Revenue Tracker ทุกการประชุม",team:"ทีมขาย",owner:"ซิ, บาร์ท",due:"",pri:"urgent"},
+  {task:"Track & Confirm ยอดรายรับตาม Revenue Tracker ทุก Column ทุกการประชุม",team:"ทีมขาย",owner:"เบิ้ม + ตี้",due:"",pri:"urgent"},
+  {task:"Update สถานะ Dazzle — รอ PO Toyota งานแรก ~3–4 แสน (Digital Twin)",team:"ทีมขาย",owner:"เบิ้ม",due:"",pri:"watch"},
+  {task:"Update สถานะ Yamazen — ยืนยันยอด ~20M ใน Revenue Tracker",team:"ทีมขาย",owner:"เบิ้ม",due:"",pri:"watch"},
+  {task:"ส่งข้อมูล Leads ใหม่ (CPI, HDD Supplier, Calcom cluster) ให้ทีม",team:"ทีมขาย",owner:"บาร์ท",due:"2026-03-09",pri:"watch"},
+  {task:"แก้ไข Overhead Allocation เข้าแต่ละ Job ให้ครบ (ไม่ใช่แค่ DM+DL)",team:"บัญชี",owner:"แตง",due:"2026-03-31",pri:"urgent"},
+  {task:"ใช้ DL จากระบบ HR (ชั่วโมงจริงต่อ Job) แทนการประมาณการ",team:"บัญชี",owner:"แตง",due:"",pri:"urgent"},
+  {task:"แยก Cost of Sales กับ S&A ออกจากกัน — ทำ P&L ที่ถูกต้อง",team:"บัญชี",owner:"แตง",due:"2026-03-31",pri:"urgent"},
+  {task:"ทำ P&L ใหม่ Target 100M แตกรายเดือน นำเสนอครั้งหน้า",team:"บัญชี",owner:"แตง",due:"",pri:"urgent"},
+  {task:"คุยเรื่องสร้าง Dummy Project สำหรับ Overhead ส่วนกลาง (กับเบิ้ม)",team:"บัญชี",owner:"แตง + เบิ้ม",due:"2026-03-20",pri:"watch"},
+  {task:"แยก OT + ตรวจสอบ Job ที่มี Additional PO แยกใบ (GP บิดเบือน)",team:"บัญชี",owner:"แตง",due:"2026-03-31",pri:"watch"},
+  {task:"Implement AI ช่วย Key BOM เข้าระบบแทน Excel (ลดเวลา 30–35%)",team:"Engineering",owner:"ตุ๋น + ทีม Eng",due:"",pri:"watch"},
+  {task:"เริ่มประชุมด้วยการ Follow-up Action Items จากครั้งก่อนทุกครั้ง",team:"Management",owner:"RT",due:"",pri:"urgent"},
+  {task:"กำหนด Action Owner + Deadline ชัดเจนทุกประเด็น",team:"Management",owner:"RT",due:"",pri:"urgent"},
+  {task:"ส่ง Meeting Summary + Action Items ภายใน 24 ชม. หลังประชุม",team:"Management",owner:"แตง",due:"",pri:"watch"},
+];
+
+const TC={"ทีมขาย":"#3B82F6","บัญชี":"#8B5CF6","Engineering":"#10B981","Management":"#F59E0B"};
+let decisions=[...DEFAULT_DECISIONS];
+let actions=DEFAULT_ACTIONS.map(a=>({...a}));
+let secOpen={kpi:true,agenda:true,keypoints:true,decisions:true,actions:true,notes:true,next:true};
+
+function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+
+function toggleSec(id){
+  secOpen[id]=!secOpen[id];
+  const b=document.getElementById('body-'+id),c=document.getElementById('chev-'+id);
+  if(b)b.style.display=secOpen[id]?'':'none';
+  if(c){c.textContent=secOpen[id]?'▼':'▶';}
+}
+
+function updateDateDisplay(){
+  const val=document.getElementById('meetingDate').value;
+  if(!val)return;
+  const d=new Date(val+'T00:00:00');
+  document.getElementById('meetingDateDisplay').textContent=d.toLocaleDateString('th-TH',{year:'numeric',month:'long',day:'numeric'});
+}
+
+function addAtt(){
+  const inp=document.getElementById('attInput');
+  const val=inp.value.trim();if(!val)return;
+  const tag=document.createElement('div');tag.className='att-tag';tag.textContent=val;
+  document.getElementById('attTags').appendChild(tag);
+  inp.value='';inp.focus();
+}
+
+function renderDec(){
+  document.getElementById('decList').innerHTML=decisions.map((d,i)=>`
+    <div class="dec-row">
+      <div class="dec-num">${i+1}</div>
+      <textarea class="stext" rows="2" style="min-height:0;flex:1" oninput="decisions[${i}]=this.value">${esc(d)}</textarea>
+      <button class="dec-del" onclick="removeDec(${i})">×</button>
+    </div>`).join('');
+}
+function addDec(){decisions.push('');renderDec();}
+function removeDec(i){decisions.splice(i,1);renderDec();}
+
+function renderAI(){
+  document.getElementById('aiTbody').innerHTML=actions.map((a,i)=>{
+    const tc=TC[a.team]||'#64748B';
+    const priHtml=a.pri==='urgent'
+      ?`<span style="font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;background:#EF444422;color:#EF4444;border:1px solid #EF444440">🔴 เร่งด่วน</span>`
+      :`<span style="font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;background:#F59E0B22;color:#F59E0B;border:1px solid #F59E0B40">🟡 ติดตาม</span>`;
+    return `<tr>
+      <td><textarea class="ai-input" rows="2" style="min-height:0" oninput="actions[${i}].task=this.value">${esc(a.task)}</textarea></td>
+      <td><span style="font-size:11px;font-weight:700;color:${tc}">${esc(a.team)}</span></td>
+      <td><input class="ai-input" value="${esc(a.owner)}" oninput="actions[${i}].owner=this.value"></td>
+      <td><input type="date" class="ai-input" value="${a.due||''}" oninput="actions[${i}].due=this.value" style="color-scheme:dark"></td>
+      <td>${priHtml}</td>
+      <td><button class="ai-del" onclick="removeAI(${i})">×</button></td>
+    </tr>`;
+  }).join('');
+}
+function addAI(){actions.push({task:'',team:'ทีมขาย',owner:'',due:'',pri:'urgent'});renderAI();}
+function removeAI(i){actions.splice(i,1);renderAI();}
+
+function getState(){
+  return{
+    meetingDate:document.getElementById('meetingDate').value,
+    meetingName:document.getElementById('meetingName').value,
+    meetingVenue:document.getElementById('meetingVenue').value,
+    agenda:document.getElementById('agenda').value,
+    keypoints:document.getElementById('keypoints').value,
+    decisions,actions,
+    notes:document.getElementById('notes').value,
+    nextDate:document.getElementById('nextDate').value,
+    nextVenue:document.getElementById('nextVenue').value,
+    nextAgenda:document.getElementById('nextAgenda').value,
+  };
+}
+function saveLocal(){
+  localStorage.setItem('meeting_06032026',JSON.stringify(getState()));
+  const now=new Date().toLocaleTimeString('th-TH');
+  document.getElementById('lastSaved').textContent='บันทึกล่าสุด: '+now;
+  const lbl=document.getElementById('savedLbl');
+  lbl.classList.add('show');setTimeout(()=>lbl.classList.remove('show'),2000);
+}
+function loadLocal(){
+  const raw=localStorage.getItem('meeting_06032026');
+  if(!raw)return;
+  try{
+    const s=JSON.parse(raw);
+    if(s.meetingDate)document.getElementById('meetingDate').value=s.meetingDate;
+    if(s.meetingName)document.getElementById('meetingName').value=s.meetingName;
+    if(s.meetingVenue)document.getElementById('meetingVenue').value=s.meetingVenue;
+    if(s.agenda)document.getElementById('agenda').value=s.agenda;
+    if(s.keypoints)document.getElementById('keypoints').value=s.keypoints;
+    if(s.decisions&&s.decisions.length)decisions=s.decisions;
+    if(s.actions&&s.actions.length)actions=s.actions;
+    if(s.notes)document.getElementById('notes').value=s.notes;
+    if(s.nextDate)document.getElementById('nextDate').value=s.nextDate;
+    if(s.nextVenue)document.getElementById('nextVenue').value=s.nextVenue;
+    if(s.nextAgenda)document.getElementById('nextAgenda').value=s.nextAgenda;
+  }catch(e){}
+}
+function addNewMeeting(){
+  if(!confirm('เริ่มสรุปการประชุมใหม่? (ข้อมูลปัจจุบันจะถูกบันทึกไว้)'))return;
+  saveLocal();
+  decisions=[];actions=[{task:'',team:'ทีมขาย',owner:'',due:'',pri:'urgent'}];
+  ['agenda','keypoints','notes','nextAgenda'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('meetingDate').value=new Date().toISOString().split('T')[0];
+  document.getElementById('nextDate').value='';
+  updateDateDisplay();renderDec();renderAI();
+  localStorage.removeItem('meeting_06032026');
+}
+
+setInterval(saveLocal,30000);
+
+window.addEventListener('load',()=>{
+  loadLocal();
+  renderDec();
+  renderAI();
+  updateDateDisplay();
+});
+</script>
+</body>
+</html>
